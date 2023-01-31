@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.radial-blue {
+    background: radial-gradient(lightyellow, skyblue);
+}
+
+@layer utilities {
+    .section-min-height {
+        min-height: calc(100vh - 68px);
+    }
+
+    .toggle-btn {
+        @apply [&>div::before]:translate-y-0 
+        [&>div::before]:rotate-45
+        [&>div::after]:translate-y-0 
+        [&>div::after]:-rotate-45
+        [&>div]:bg-transparent
+        [&>div]:rotate-[720deg]
+    }
+}
+
+/* @layer components {
+    .btn-primary {
+        @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75
+    }
+} */
